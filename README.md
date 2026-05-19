@@ -27,7 +27,7 @@
 - [Project Structure](#project-structure)
 - [Team](#team)
 
-
+<br>
 
 ## 🔍 Project Overview
 
@@ -37,6 +37,7 @@ Core modes: **Manual**, **Autonomous** obstacle avoidance, and **Auto-Parking**.
 Bonus modes: **Teach** (record a path), **Repeat** (replay it), **Leader**, and **Follower** for two-robot swarm coordination.
 
 
+<br>
 
 ## ✨ Features
 
@@ -50,7 +51,7 @@ Bonus modes: **Teach** (record a path), **Repeat** (replay it), **Leader**, and 
 | 👥 Leader–Follower | Two robots coordinate via Bluetooth; follower uses gap control |
 | 📱 Flutter App | Custom-built mobile app — controls, mode switching, battery gauge |
 
-
+<br>
 
 ## 🔧 Hardware Requirements
 
@@ -70,7 +71,7 @@ See the bill of materials here
 | Low-Battery LED | A5 |
 | Bluetooth TX/RX | Hardware Serial (0 / 1) |
 
----
+<br>
 
 ## 🏗️ System Architecture
 
@@ -101,6 +102,7 @@ See the bill of materials here
    [Left Motor]  [Right Motor]
 ```
 
+<br>
 
 ## 📡 Bluetooth Command Protocol
 
@@ -160,7 +162,7 @@ All commands are single ASCII characters sent from the app to the car at **9600 
 | `"LF:LOST"` | Follower lost leader signal |
 | `"LF:FOUND"` | Follower re-acquired leader |
 
-
+<br>
 
 ## 🗂️ Modes Overview
 
@@ -178,7 +180,7 @@ VANTIX supports **7 operating modes**, all switchable at runtime via a single Bl
 
 > **Emergency stop:** sending `S` from any mode immediately cuts motors and returns to Manual.
 
-
+<br>
 
 ## 🎮 Operating Modes
 
@@ -191,7 +193,7 @@ Default speed:       speed[4] = 160 PWM
 Auto-stop timeout:   600 ms
 Turn ratio:          TurnRatio = 0.5  (arc turns use 50% inner-wheel speed)
 ```
-
+---
 
 ### 2. 🚗 Autonomous Mode
 
@@ -225,7 +227,7 @@ Cruise speed:        130 PWM
                all directions blocked → AUTO_STOPPED → wait
 ```
 
-
+---
 
 ### 3. 🅿️ Auto-Parking Mode
 
@@ -260,7 +262,7 @@ PARK_STRAIGHTEN         (backward-left arc up to 1550 ms or rear stop)
 PARK_DONE               (motors stopped)
 ```
 
----
+<br>
 
 ## 🔋 Battery Monitoring
 
@@ -276,7 +278,7 @@ percentage  = (batteryVolt / 12.0) * 100          // clamped to [0, 100]
 - The **LED on pin A5** turns on when `batteryVolt ≤ 8.0 V` (low-battery warning).
 - The Flutter app displays this as a gauge and can trigger an in-app alert.
 
-
+<br>
 
 ## 📱 Flutter Mobile App
 
@@ -300,7 +302,7 @@ dependencies:
   fl_chart: ^0.65.0
 ```
 
-
+<br>
 
 ## 🌟 Bonus Features
 
@@ -379,6 +381,7 @@ A **watchdog timer** stops the follower and sends `"LF:LOST"` if no valid packet
 #define LF_FOLLOWER_SPEED          150   // Follower default PWM
 ```
 
+<br>
 
 
 ## 🚀 Getting Started
@@ -421,6 +424,7 @@ flutter pub get
 flutter run
 ```
 
+<br>
 
 
 ## 📁 Project Structure
@@ -464,19 +468,16 @@ vantix/
 └── README.md
 ```
 
-
+<br>
 
 ## 👥 Team
 
-| Name | Role |
-|---|---|
-| Member 1 | Firmware — Autonomous & Parking Modes |
-| Member 2 | Firmware — Manual Mode & Bluetooth |
-| Member 3 | Flutter App Development |
-| Member 4 | Hardware Assembly & Power System |
-| Member 5 | Bonus: Teach-and-Repeat & Leader–Follower |
-
-> *Replace with your actual team member names and roles.*
+1. Amaar Ayman
+2. Ahmed Nagy
+3. Omar Wael
+4. Seif Raafat
+5. Morsy Ahmed
+6. Youssef Moussa
 
 
 
