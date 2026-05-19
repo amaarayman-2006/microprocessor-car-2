@@ -421,19 +421,19 @@ flutter run
 vantix/
 │
 ├── firmware/
-│   ├── VANTIX_second.ino            # Entry point: setup() + loop()
-│   ├── config.h                     # Pin definitions & all tuning constants
+│   ├── VANTIX_second.ino            
+│   ├── config.h                     
 │   │
-│   ├── Motor.h / Motor.cpp          # L298N driver — 8 directions + PWM speed
-│   ├── Sensor.h / Sensor.cpp        # HC-SR04 × 4 (front / back / left / right)
-│   ├── Bluetooth.h / Bluetooth.cpp  # Serial read/write wrapper
-│   ├── Battery.h / Battery.cpp      # ADC → voltage → %, timed TX, LED control
+│   ├── Motor.h / Motor.cpp          
+│   ├── Sensor.h / Sensor.cpp        
+│   ├── Bluetooth.h / Bluetooth.cpp  
+│   ├── Battery.h / Battery.cpp      
 │   │
-│   ├── Modes.h / Modes.cpp          # 7-mode FSM, command router, update dispatcher
+│   ├── Modes.h / Modes.cpp          
 │   │
-│   ├── TeachAndRepeat.h / TeachAndRepeat.cpp  # Teach & Repeat implementation
-│   ├── LeaderFollower.h / LeaderFollower.cpp  # Leader & Follower implementation
-│   └── LeaderFollowerConfig.h                # Role selection & LF constants
+│   ├── TeachAndRepeat.h / TeachAndRepeat.cpp  
+│   ├── LeaderFollower.h / LeaderFollower.cpp  
+│   └── LeaderFollowerConfig.h                
 │
 ├── flutter_app/
 │   ├── lib/
