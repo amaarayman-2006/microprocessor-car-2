@@ -55,21 +55,9 @@ Bonus modes: **Teach** (record a path), **Repeat** (replay it), **Leader**, and 
 
 ## 🔧 Hardware Requirements
 
-See the bill of materials here
+You can access the hardware Bill Of Materials and Pin Connections [here](Hardware%20Components.md)
 
-### Pin Map (from `config.h`)
 
-| Signal | Arduino Pin |
-|---|---|
-| Motor Left — IN1 / IN2 / EN | 2 / 3 / 5 |
-| Motor Right — IN3 / IN4 / EN | 4 / 7 / 6 |
-| Ultrasonic Front TRIG / ECHO | 8 / 9 |
-| Ultrasonic Back TRIG / ECHO | 10 / 11 |
-| Ultrasonic Right TRIG / ECHO | 12 / 13 |
-| Ultrasonic Left TRIG / ECHO | A1 / A2 |
-| Battery ADC | A0 |
-| Low-Battery LED | A5 |
-| Bluetooth TX/RX | Hardware Serial (0 / 1) |
 
 <br>
 
